@@ -130,15 +130,15 @@
       <a class="logreg-tab-item" href="login.jsp">会员登录</a>
       <a class="logreg-tab-item active" href="register.jsp">免费注册</a>
     </nav>
-    <div class="logreg-form"><form id="register_form" name="register" action="./assets/饿了么-网上订餐-叫外卖上ele.me.html" method="post" autocomplete="off" novalidate="novalidate">
+    <div class="logreg-form"><form id="register_form" name="register" action="<%=basePath %>/user!register" method="post" autocomplete="off" novalidate="novalidate">
   <div class="relative">
     <label><span class="required-mark">*</span>用户名</label>
-    <input type="text" class="logreg-input" name="sf_guard_user[username]">
+    <input type="text" class="logreg-input" name="user.username">
   </div>
 
   <div class="relative">
     <label><span class="required-mark">*</span>密码</label>
-    <input type="password" id="sf_guard_user_password" class="logreg-input" name="sf_guard_user[password]">
+    <input type="password" id="sf_guard_user_password" class="logreg-input" name="user.password">
   </div>
 
   <div class="relative">
@@ -148,7 +148,7 @@
 
   <div class="relative">
     <label><span class="required-mark">*</span>电子邮箱</label>
-    <input type="text" class="logreg-input" name="sf_guard_user[email]">
+    <input type="text" class="logreg-input" name="user.email">
   </div>
 
   

@@ -8,7 +8,7 @@
     <session-factory>
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="connection.url">
-        	 <![CDATA[jdbc:sqlserver://192.168.7.129:1433;databaseName=ooms?useUnicode=true&characterEncoding=utf8]]>
+        	 jdbc:sqlserver://192.168.7.129:1433;databaseName=ooms
       	</property>
         <property name="connection.username">sa</property>
         <property name="connection.password">123456</property>
@@ -16,6 +16,11 @@
         <property name="current_session_context_class">thread</property>
         <property name="format_sql">true</property>
         <property name="show_sql">true</property>
+        
+        <mapping class="com.ooms.model.entity.Meal"/>
+        <mapping class="com.ooms.model.entity.Order"/>
+        <mapping class="com.ooms.model.entity.Shop"/>
+        <mapping class="com.ooms.model.entity.User"/>
         
     </session-factory>
 

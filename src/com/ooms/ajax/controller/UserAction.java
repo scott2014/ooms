@@ -8,6 +8,7 @@ public class UserAction extends ActionSupport {
 	private User user;
 	
 	public String register() throws Exception {
+		
 		return "register";
 	}
 

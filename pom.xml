@@ -44,6 +44,7 @@
 	    <version>5.1.27</version>
 	</dependency>
 	
+	<!-- struts -->
 	<dependency>
 	    <groupId>org.apache.struts</groupId>
 	    <artifactId>struts2-core</artifactId>
@@ -52,19 +53,24 @@
 	
 	 <dependency>
        <groupId>org.apache.struts</groupId>
+       <artifactId>struts2-embeddedjsp-plugin</artifactId>
+       <version>${struts_version}</version>
+   </dependency>
+   
+   	 <dependency>
+       <groupId>org.apache.struts</groupId>
        <artifactId>struts2-json-plugin</artifactId>
        <version>${struts_version}</version>
    </dependency>
+   
+      
+   	 <dependency>
+       <groupId>org.apache.struts</groupId>
+       <artifactId>struts2-spring-plugin</artifactId>
+       <version>${struts_version}</version>
+   </dependency>
     
-    
-    <!-- sqlserver 2005 -->
     <dependency>
-	    <groupId>com.microsoft</groupId>
-	    <artifactId>sqljdbc</artifactId>
-	    <version>1.0</version>
-	</dependency>
-	
-	<dependency>
 	    <groupId>com.microsoft</groupId>
 	    <artifactId>sqljdbc4</artifactId>
 	    <version>1.0</version>
@@ -162,7 +168,24 @@
 		<version>1.2</version>
 	</dependency>
 
+	<!-- slf4j -->
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.7</version>
+	</dependency>
 	
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>1.7.7</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+	</dependency>
 	
 	
     
