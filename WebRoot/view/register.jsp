@@ -127,8 +127,8 @@
 
   <div class="logreg-box">
     <nav class="clearfix">
-      <a class="logreg-tab-item" href="login.html">会员登录</a>
-      <a class="logreg-tab-item active" href="register.html">免费注册</a>
+      <a class="logreg-tab-item" href="login.jsp">会员登录</a>
+      <a class="logreg-tab-item active" href="register.jsp">免费注册</a>
     </nav>
     <div class="logreg-form"><form id="register_form" name="register" action="./assets/饿了么-网上订餐-叫外卖上ele.me.html" method="post" autocomplete="off" novalidate="novalidate">
   <div class="relative">
