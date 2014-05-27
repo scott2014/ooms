@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="user" location="0,0" size="0,0">
+    <action name="user" location="0,0" size="0,0">
+      <result name="register">
+        <resourceEdge source="register" routing="0" target="login.jsp" />
+      </result>
+      <result name="login" />
+      <result name="fail" />
+      <result name="mgr" />
+      <result name="loginOut" />
+      <result name="updateInfo" />
+      <result name="showInfo" />
+      <result name="toUpdateInfo" />
+    </action>
+    <action name="repository" location="0,0" size="0,0">
+      <result name="success" />
+      <result name="load" />
+      <result name="loadById" />
+      <result name="update" />
+      <result name="myrepo" />
+      <result name="showDetail" />
+      <result name="toCreate" />
+    </action>
+    <action name="medicinal" location="0,0" size="0,0">
+      <result name="success" />
+      <result name="toCreate" />
+      <result name="load" />
+      <result name="loadMe" />
+      <result name="toUpdate" />
+      <result name="toDetail" />
+      <result name="toApply" />
+      <result name="myApply" />
+      <result name="apply" />
+      <result name="update" />
+      <result name="tgApply" />
+      <result name="rfApply" />
+      <result name="appliedMedicinal" />
+    </action>
+    <action name="favorite" location="0,0" size="0,0">
+      <result name="load" />
+    </action>
+    <action name="history" location="0,0" size="0,0">
+      <result name="load" />
+    </action>
+    <action name="userMedicinal" location="0,0" size="0,0">
+      <result name="check" />
+      <result name="toCheck" />
+      <result name="update" />
+    </action>
+  </package>
+  <package name="userajax" location="0,0" size="0,0">
+    <action name="user" location="0,0" size="0,0">
+      <result name="check" />
+      <result name="login" />
+      <result name="freeze" />
+      <result name="release" />
+      <result name="delete" />
+      <result name="updatePass" />
+    </action>
+    <action name="repository" location="0,0" size="0,0">
+      <result name="delete" />
+    </action>
+    <action name="favorite" location="0,0" size="0,0">
+      <result name="success" />
+      <result name="delete" />
+    </action>
+    <action name="medicinal" location="0,0" size="0,0">
+      <result name="upload" />
+      <result name="delete" />
+    </action>
+  </package>
+  <webResource name="login.jsp" path="/login/login.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

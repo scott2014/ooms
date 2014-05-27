@@ -1,5 +1,7 @@
 package com.ooms.struts.controller;
 
-public class UserAction {
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UserAction extends ActionSupport {
 	
 }

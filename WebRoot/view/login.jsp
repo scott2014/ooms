@@ -146,8 +146,8 @@
 					<div class="logreg-box">
 						<nav class="clearfix">
 						<a class="logreg-tab-item active"
-							href="login.html">会员登录</a>
-						<a class="logreg-tab-item" href="register.html">免费注册</a>
+							href="login.jsp">会员登录</a>
+						<a class="logreg-tab-item" href="register.jsp">免费注册</a>
 						</nav>
 						<div class="logreg-form">
 							<form id="login_form" name="login" method="post"
