@@ -57,6 +57,28 @@
 	    <artifactId>sqljdbc</artifactId>
 	    <version>1.0</version>
 	</dependency>
+	
+	<dependency>
+	    <groupId>com.microsoft</groupId>
+	    <artifactId>sqljdbc4</artifactId>
+	    <version>1.0</version>
+	</dependency>
+	 
+	<!-- spring packages -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>3.2.5.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>3.2.5.RELEASE</version>
+	</dependency>
+	
+	
+	
     
   </dependencies>
   <build>
