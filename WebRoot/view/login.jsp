@@ -151,7 +151,7 @@
 						</nav>
 						<div class="logreg-form">
 							<form id="login_form" name="login" method="post"
-								action="./assets/饿了么-网上订餐-叫外卖上ele.me.html"
+								action="<%=basePath %>/user!login"
 								novalidate="novalidate">
 								<div class="relative">
 									<label for="login_username">
