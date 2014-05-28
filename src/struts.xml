@@ -15,7 +15,13 @@
 			<result type="redirect" name="login">
 				/view/meal.jsp
 			</result>
-		</action>		
+		</action>	
+		
+		<action name="meal" class="com.ooms.struts.controller.MealAction">
+			<result type="redirect" name="add">
+				/view/meal.jsp
+			</result>
+		</action>	
 	</package>
 
 	<package name="userajax" namespace="/userajax" extends="json-default">

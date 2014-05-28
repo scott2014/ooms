@@ -10,7 +10,11 @@
       </result>
     </action>
   </package>
-  <package name="userajax" location="0,0" size="0,0" />
+  <package name="userajax" location="0,0" size="0,0">
+    <action name="meal" location="0,0" size="0,0">
+      <result name="add" />
+    </action>
+  </package>
   <webResource name="login.jsp" path="/login/login.jsp" location="0,0" size="0,0" />
   <webResource name="login.jsp" path="/view/login.jsp" location="0,0" size="0,0" />
   <webResource name="meal.jsp" path="/view/meal.jsp" location="0,0" size="0,0" />

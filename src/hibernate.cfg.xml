@@ -21,6 +21,7 @@
         <mapping class="com.ooms.model.entity.Order"/>
         <mapping class="com.ooms.model.entity.Shop"/>
         <mapping class="com.ooms.model.entity.User"/>
+        <mapping class="com.ooms.model.entity.Category"/>
         
     </session-factory>
 

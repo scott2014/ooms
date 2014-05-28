@@ -96,7 +96,7 @@ var meal = {
 		$("#shop_select").live("change",function() {
 			var index = $(this).val();
 			if (index == "-2") {
-				$(this).parent().html("<input type='text' name='meal.shopName' id='shopName'/>");
+				$(this).parent().html("<input type='text' name='shopName' id='shopName'/>");
 				$("#shopName").focus();
 				
 				var select_html = $("#shop_select_box").html();
@@ -114,7 +114,7 @@ var meal = {
 		$("#category_select").live("change",function() {
 			var index = $(this).val();
 			if (index == "-2") {
-				$(this).parent().html("<input type='text' name='meal.categoryName' id='categoryName'/>");
+				$(this).parent().html("<input type='text' name='categoryName' id='categoryName'/>");
 				$("#categoryName").focus();
 				
 				var select_html = $("#category_select_box").html();
