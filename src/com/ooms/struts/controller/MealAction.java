@@ -47,7 +47,7 @@ public class MealAction extends ActionSupport {
 			String[] arr = this.photoFileName.split("[.]");
 			String suffix = "";
 			if (arr != null && arr.length > 1 ) {
-				suffix = arr[1];
+				suffix = arr[arr.length - 1];
 			}
 			
 			String newFileName = System.currentTimeMillis() + "." + suffix;

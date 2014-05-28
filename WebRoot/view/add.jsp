@@ -115,13 +115,13 @@
 
 		<div class="mainDown">
 			<div class="add">
-			<form action="<%=basePath %>/meal!add" method="post" id="form">
+			<form action="<%=basePath %>/meal!add" method="post" id="form" enctype="multipart/form-data">
 			<table>
 				<tbody>
 					<tr >
 						<td align="right">图片：</td>
 						<td align="left">
-							<input type="file" name="meal.photo" />
+							<input type="file" name="photo" />
 						</td>
 						<td align="left">
 						    <span></span>
