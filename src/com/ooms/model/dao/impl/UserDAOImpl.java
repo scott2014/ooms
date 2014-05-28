@@ -37,4 +37,11 @@ public class UserDAOImpl implements UserDAO {
 		this.hibernateTemplate.update(u);
 	}
 
+	public User login(String username, String email) {
+		String hql = "from User where username= ? or email = ?";
+		
+		List<User> result = this.hibernateTemplate.find(hql,username,email);
+		return result != null && result.size() > 0 ? result.get(0) : null;
+	}
+
 }

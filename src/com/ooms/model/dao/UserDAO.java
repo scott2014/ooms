@@ -11,4 +11,6 @@ public interface UserDAO {
 	public void update(User u);
 	
 	public User findById(long id);
+	
+	public User login(String username,String email);
 }

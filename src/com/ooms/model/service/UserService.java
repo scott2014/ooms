@@ -19,5 +19,10 @@ public class UserService {
 	@Transactional
 	public void add(User u) {
 		this.userDAO.add(u);
-	} 
+	}
+	
+	
+	public User login(String loginStr) {
+		return this.userDAO.login(loginStr, loginStr);
+	}
 }

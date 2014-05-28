@@ -61,10 +61,8 @@
 				<div class="topLeft">
 					<ul>
 						<li>
-							<a href="http://www.shikuaigou.com/login">登录</a>
-						</li>
-						<li>
-							<a href="http://www.shikuaigou.com/register">免费注册</a>
+							用户：Scott Smith
+						
 						</li>
 					</ul>
 				</div>

@@ -22,13 +22,13 @@
 		<meta name="msapplication-tilecolor" content="#0088ff">
 		<meta name="renderer" content="webkit">
 
-		<link href="./assets/forward_201405232030.css" type="text/css"
-			rel="stylesheet">
-		<link rel="apple-touch-icon-precomposed"
-			href="https://static.ele.me/apple-touch-icon.png?v=2">
-		<link rel="shortcut icon" href="https://ele.me/favicon.ico?v=2"
-			type="image/x-icon">
-
+		<link href="./assets/forward_201405232030.css" type="text/css" rel="stylesheet">
+		<link rel="apple-touch-icon-precomposed" href="https://static.ele.me/apple-touch-icon.png?v=2">
+		<link rel="shortcut icon" href="https://ele.me/favicon.ico?v=2" type="image/x-icon">
+			
+		<script type="text/javascript" src="<%=basePath %>/view/assets/jquery-1.8.3.min.js"></script>
+	    <script type="text/javascript" src="<%=basePath %>/view/assets/base.js"></script>	
+	    <script type="text/javascript" src="<%=basePath%>/view/assets/login.js"></script>
 
 	</head>
 
@@ -171,15 +171,8 @@
 
 
 								<div class="clearfix">
-									<!--
-    <label class="logreg-checkbox">
-      <input type="checkbox" name="signin[remember]" defaultvalue="on" checked="true">
-       记住我
-    </label>
-    <a href="https://ele.me/forget-password">忘记密码？</a>
-    -->
 									<button id="login_btn" class="btn btn-yellow logreg-btn"
-										type="submit" data-loading="登录中…">
+										type="button" data-loading="登录中…">
 										登录
 									</button>
 								</div>
