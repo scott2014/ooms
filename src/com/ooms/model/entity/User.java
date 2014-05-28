@@ -12,7 +12,7 @@ import javax.persistence.Table;
  * User entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "user", schema = "dbo", catalog = "ooms")
+@Table(name = "customer", schema = "dbo", catalog = "ooms")
 public class User implements java.io.Serializable {
 
 	// Fields
@@ -44,8 +44,7 @@ public class User implements java.io.Serializable {
 
 	// Property accessors
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "id", unique = true, nullable = false)
+	@GeneratedValue
 	public Long getId() {
 		return this.id;
 	}

@@ -16,6 +16,7 @@
 		<link rel="shortcut icon" href="http://www.shikuaigou.com/assets/img/favicon.ico">
 		<link rel="stylesheet" href="./assets/common.css" type="text/css" media="all">
 		<link rel="stylesheet" href="./assets/index.css" type="text/css" media="all">
+		<link rel="stylesheet" href="./assets/add.css" type="text/css" media="all">
 
 		<script charset="UTF-8" src="./assets/bundle.js"></script>
 		<script charset="UTF-8" src="./assets/iframeWidget.js"></script>
@@ -64,7 +65,7 @@
 						<a class="jingxuan" >任君挑选</a>
 					</li>
 					<li>
-						<a class="genxing" href="<%=basePath %>/view/add.jsp" >添加</a>
+						<a class="genxing" ></a>
 					</li>
 				</ul>
 			</div>
@@ -93,39 +94,82 @@
 		</div>
 
 		<div class="mainDown">
-			<ul>
-				<li class="">
-					<div class="commodity-body">
-						<div class="image lazy-img">
-							<div class="productWrap">
-								<a href="http://www.shikuaigou.com/deal/EZBFvi" target="_blank"><img
-										src="./assets/T1R0x5FpXcXXXXXXXX_!!0-item_pic.jpg_300x300.jpg"
-										data-src="http://img04.taobaocdn.com/bao/uploaded/i4/T1R0x5FpXcXXXXXXXX_!!0-item_pic.jpg_300x300.jpg"
-										alt="【T恤】2014夏装 纯色 莱卡棉 贴身男士短袖" class="ST-uLi-loaded"
-										style="display: inline;">
-								</a>
-							</div>
-
-							<h4>
-								<i class="downTaoIcon"></i>
-
-
-								<a href="http://www.shikuaigou.com/deal/EZBFvi" target="_blank"
-									title="【T恤】2014夏装 纯色 莱卡棉 贴身男士短袖">【T恤】2014夏装 纯色 莱卡棉 贴身男士短袖</a>
-							</h4>
-
-							<p>
-								<a
-									href="http://www.shikuaigou.com/jump/EZBFvi?sid=0.47504479507915676"
-									class="rushBuy" target="_blank">去抢购</a>
-
-								<span class="price marLe">￥9.44</span>
-								<span class="originalPrice mainDownT">￥59.00</span>
-							</p>
-						</div>
-					</div>
-				</li>
-			</ul>
+			<div class="add">
+			<table>
+				<tbody>
+					<tr >
+						<td align="right">图片：</td>
+						<td align="left">
+							<input type="file" name="photo" />
+						</td>
+						<td align="left">
+						    <span></span>
+						</td>
+					</tr>
+					<tr >
+						<td align="right">店铺名称：</td>
+						<td align="left">
+							<select name="medicinal.repositoryId" id="shiji_select" style="height:26px;">
+	        					<s:iterator value="myrepos">
+	        						<option value='<s:property value="id"/>'>
+	        							<s:property value="repoName"/>
+	        						</option>
+	        					</s:iterator>
+	        				</select>
+	        			</td>
+	        			<td align="left">
+						    <span></span>
+						</td>
+					</tr>
+					<tr >
+						<td align="right">快餐名称：</td>
+						<td align="left">
+							<input type="text" name="medicinal.no"/>
+	        			</td>
+	        			<td align="left">
+						    <span></span>
+						</td>
+					</tr>
+					<tr >
+						<td align="right"> 价格：</td>
+						<td align="left">
+							 <input type="text" name="medicinal.formula"/>
+	        			</td>
+	        			<td align="left">
+						    <span></span>
+						</td>
+					</tr>
+					
+					<tr >
+						<td align="right"> 送餐费用：</td>
+						<td align="left">
+							 <input type="text" name="medicinal.name"/>
+	        			</td>
+	        			<td align="left">
+						    <span></span>
+						</td>
+					</tr>
+					
+					<tr >
+						<td align="right"> 描述：</td>
+						<td align="left">
+							  <input type="text" name="medicinal.cas"/>
+	        			</td>
+	        			<td align="left">
+						    <span></span>
+						</td>
+					</tr>
+					
+					
+					<tr >
+						<td align="center" colspan="3">
+							<input type="button" value="提交"  id="tijiao" class="btn"/> 
+							<input type="reset" value="重置"  class="btn"/>
+	        			</td>
+					</tr>
+				</tbody>
+		</table>
+			</div>
 		</div>
 
 		<div class="clearFloat"></div>
@@ -134,51 +178,10 @@
 		<input id="pageSize" style="display: none" value="48">
 		<input id="pageCount" style="display: none" value="358">
 		<div class="clearFloat"></div>
-		<div class="pagination">
-			<span class="disabled">上一页</span><span class="current">1</span><a
-				href="http://www.shikuaigou.com/default/all/2">2</a><span
-				class="ombit">...</span><a
-				href="http://www.shikuaigou.com/default/all/358">358</a><a
-				href="http://www.shikuaigou.com/default/all/2">下一页</a><span
-				class="enhanced_tip">&nbsp;</span>
-		</div>
-		<div class="clearFloat"></div>
+	    <div class="clearFloat"></div>
 		<a class="bottomBanner" href="http://www.shikuaigou.com/broadcast/"
-			target="_blank"><!-- <img src="./assets/banner20131023.jpg"
-				alt="过期不候，特价秒杀，品牌折扣，限时特价，优惠团购-十块购"> --></a>
-		<div class="classNav">
-			<i class="topBorder"></i>
-			<a href="http://www.shikuaigou.com/default/fuzhuang/" class="costume"
-				id="fuzhuang"><span>服装</span>
-			</a>
-			<i class="seperate"></i>
-			<a href="http://www.shikuaigou.com/default/jujia/" class="home"
-				id="jujia"><span>居家</span>
-			</a>
-			<i class="seperate"></i>
-			<a href="http://www.shikuaigou.com/default/xiebao/" class="shoes"
-				id="xiebao"><span>鞋包</span>
-			</a>
-			<i class="seperate"></i>
-			<a href="http://www.shikuaigou.com/default/meishi/" class="food"
-				id="meishi"><span>美食</span>
-			</a>
-			<i class="seperate"></i>
-			<a href="http://www.shikuaigou.com/default/shishang/" class="beauty"
-				id="shishang"><span>美妆</span>
-			</a>
-			<i class="seperate"></i>
-			<a href="http://www.shikuaigou.com/default/shuma/" class="digital"
-				id="shuma"><span>数码</span>
-			</a>
-			<i class="seperate"></i>
-			<a href="http://www.shikuaigou.com/default/qita/" class="creative"
-				id="qita"><span>创意</span>
-			</a>
-		</div>
-
-		<div id="mask" style="display: none;"></div>
-		<div class="footerWrap"></div>
+			target="_blank"></a>
+			<div id="mask" style="display: none;"></div>
 		<script src="./assets/wb.js" type="text/javascript" charset="utf-8">
 	</script>
 	</body>

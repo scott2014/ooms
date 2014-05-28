@@ -21,6 +21,10 @@ public class UserAction extends ActionSupport {
 		this.userService.add(user);
 		return "register";
 	}
+	
+	public String login() throws Exception {
+		return "login";
+	}
 
 	public User getUser() {
 		return user;

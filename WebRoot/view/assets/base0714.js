@@ -238,5 +238,5 @@ var favorite={
 		}
 };
 function getRootPath(){
-	return "http://www.shikuaigou.com";
+	return "http://localhost:8080/ooms";
 }

@@ -12,10 +12,16 @@
 			<result type="redirect" name="register">
 				/view/login.jsp
 			</result>
-		</action>				
+			<result type="redirect" name="login">
+				/view/meal.jsp
+			</result>
+		</action>		
 	</package>
 
 	<package name="userajax" namespace="/userajax" extends="json-default">
-		
+		<action name="meal" class="com.ooms.struts.controller.MealAction">
+			<result type="json" name="add">
+			</result>
+		</action>		
 	</package>
 </struts>    

@@ -22,6 +22,8 @@ public class Meal implements java.io.Serializable {
 	private Double roomCosts;
 	private String name;
 	private String description;
+	private String photo;
+	
 
 	// Constructors
 
@@ -31,12 +33,13 @@ public class Meal implements java.io.Serializable {
 
 	/** full constructor */
 	public Meal(Long shopId, Double price, Double roomCosts, String name,
-			String description) {
+			String description,String photo) {
 		this.shopId = shopId;
 		this.price = price;
 		this.roomCosts = roomCosts;
 		this.name = name;
 		this.description = description;
+		this.photo = photo;
 	}
 
 	// Property accessors
@@ -94,6 +97,15 @@ public class Meal implements java.io.Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	@Column(name="photo",length=255)
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 
 }

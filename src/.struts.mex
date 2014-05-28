@@ -5,10 +5,14 @@
       <result name="register">
         <resourceEdge source="register" routing="0" target="login.jsp" />
       </result>
+      <result name="login">
+        <resourceEdge source="login" routing="0" target="meal.jsp" />
+      </result>
     </action>
   </package>
   <package name="userajax" location="0,0" size="0,0" />
   <webResource name="login.jsp" path="/login/login.jsp" location="0,0" size="0,0" />
   <webResource name="login.jsp" path="/view/login.jsp" location="0,0" size="0,0" />
+  <webResource name="meal.jsp" path="/view/meal.jsp" location="0,0" size="0,0" />
 </Struts2Diagram>
 
