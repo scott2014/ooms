@@ -18,24 +18,44 @@
 		<link rel="stylesheet" href="./assets/index.css" type="text/css" media="all">
 		<link rel="stylesheet" href="./assets/add.css" type="text/css" media="all">
 
-		<script charset="UTF-8" src="./assets/bundle.js"></script>
-		<script charset="UTF-8" src="./assets/iframeWidget.js"></script>
-
-		<script type="text/javascript" src="./assets/jquery.js"></script>
-		<script type="text/javascript" src="./assets/jquery.cookie.js"></script>
-		<script type="text/javascript" src="./assets/json2.min.js"></script>
-		<script type="text/javascript" src="./assets/base0714.js"></script>
-		<script type="text/javascript" src="./assets/imgLoad.js"></script>
-		<script type="text/javascript" src="./assets/shadow.js"></script>
-		<script type="text/javascript" src="./assets/collect.js"></script>
-		<script type="text/javascript" src="./assets/returnTop.js"></script>
-		<script type="text/javascript" src="./assets/nvaBarWithNoVoice.js"></script>
-		<script type="text/javascript" src="./assets/pagination.js"></script>
+		<script type="text/javascript" src="<%=basePath %>/view/assets/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="<%=basePath %>/view/assets/base.js"></script>
+		<script type="text/javascript" src="<%=basePath %>/view/assets/add.js"></script>
 
 	</head>
 
 	<body youdao="bind">
 		<iframe id="sina_anywhere_iframe" style="display: none;"></iframe>
+		
+		<!-- 隐藏div，用于select框的添加替换 -->
+		<div style=“display:none;”>
+			<div id="shop_select_box" style="display: none;">
+				<select name="meal.shopId" id="shop_select" style="height:26px;">
+      					<option value="-1">请选择</option>
+      					<s:iterator value="myrepos">
+      						<option value='<s:property value="id"/>'>
+      							<s:property value="repoName"/>
+      						</option>
+      					</s:iterator>
+      					<option value="-2">添加</option>
+      				</select>
+	        	<span id="shop_tip">*可以选择添加新的店铺名称</span>
+			</div>
+			
+			<div id="category_select_box"  style="display: none;">
+				<select name="meal.categoryId" id="category_select" style="height:26px;">
+  					<option value="-1">请选择</option>
+  					<s:iterator value="myrepos">
+  						<option value='<s:property value="id"/>'>
+  							<s:property value="repoName"/>
+  						</option>
+  					</s:iterator>
+  				    <option value="-2">添加</option>
+  				</select>
+	        	<span id="category_tip">*可以选择添加新的菜系</span>
+			</div>
+		</div>
+		
 		<div id="topArea">
 			<div class="topAreaContainer">
 				<div class="topLeft">
@@ -95,12 +115,13 @@
 
 		<div class="mainDown">
 			<div class="add">
+			<form action="<%=basePath %>/meal!add" method="post" id="form">
 			<table>
 				<tbody>
 					<tr >
 						<td align="right">图片：</td>
 						<td align="left">
-							<input type="file" name="photo" />
+							<input type="file" name="meal.photo" />
 						</td>
 						<td align="left">
 						    <span></span>
@@ -109,13 +130,16 @@
 					<tr >
 						<td align="right">店铺名称：</td>
 						<td align="left">
-							<select name="medicinal.repositoryId" id="shiji_select" style="height:26px;">
+							<select name="meal.shopId" id="shop_select" style="height:26px;">
+	        					<option value="-1">请选择</option>
 	        					<s:iterator value="myrepos">
 	        						<option value='<s:property value="id"/>'>
 	        							<s:property value="repoName"/>
 	        						</option>
 	        					</s:iterator>
+	        					<option value="-2">添加</option>
 	        				</select>
+	        				<span id="shop_tip">*可以选择添加新的店铺名称</span>
 	        			</td>
 	        			<td align="left">
 						    <span></span>
@@ -124,7 +148,25 @@
 					<tr >
 						<td align="right">快餐名称：</td>
 						<td align="left">
-							<input type="text" name="medicinal.no"/>
+							<input type="text" name="meal.name"/>
+	        			</td>
+	        			<td align="left">
+						    <span id="name_tip"></span>
+						</td>
+					</tr>
+					<tr >
+						<td align="right">菜系：</td>
+						<td align="left">
+							<select name="meal.categoryId" id="category_select" style="height:26px;">
+	        					<option value="-1">请选择</option>
+	        					<s:iterator value="myrepos">
+	        						<option value='<s:property value="id"/>'>
+	        							<s:property value="repoName"/>
+	        						</option>
+	        					</s:iterator>
+	        				    <option value="-2">添加</option>
+	        				</select>
+	        				<span id="category_tip">*可以选择添加新的菜系</span>
 	        			</td>
 	        			<td align="left">
 						    <span></span>
@@ -133,30 +175,30 @@
 					<tr >
 						<td align="right"> 价格：</td>
 						<td align="left">
-							 <input type="text" name="medicinal.formula"/>
+							 <input type="text" name="meal.price"/>
 	        			</td>
 	        			<td align="left">
-						    <span></span>
+						    <span id="price_tip"></span>
 						</td>
 					</tr>
 					
 					<tr >
 						<td align="right"> 送餐费用：</td>
 						<td align="left">
-							 <input type="text" name="medicinal.name"/>
+							 <input type="text" name="meal.roomCosts"/>
 	        			</td>
 	        			<td align="left">
-						    <span></span>
+						    <span id="roomCosts_tip"></span>
 						</td>
 					</tr>
 					
 					<tr >
 						<td align="right"> 描述：</td>
 						<td align="left">
-							  <input type="text" name="medicinal.cas"/>
+							  <input type="text" name="meal.description"/>
 	        			</td>
 	        			<td align="left">
-						    <span></span>
+						    <span id="desc_tip"></span>
 						</td>
 					</tr>
 					
@@ -169,6 +211,7 @@
 					</tr>
 				</tbody>
 		</table>
+		</form>
 			</div>
 		</div>
 

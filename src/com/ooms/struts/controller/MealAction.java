@@ -1,5 +1,7 @@
 package com.ooms.struts.controller;
 
+import java.io.File;
+
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,13 @@ public class MealAction extends ActionSupport {
 	
 	private Meal meal;
 	
+	private String shopName;
+	private String categoryName;
+	
+	private File photo;
+	private String photoFileName;
+	private String photoContentType;
+	
 	public String add() throws Exception {
 		this.mealService.add(meal);
 		return "add";
@@ -27,5 +36,45 @@ public class MealAction extends ActionSupport {
 
 	public void setMeal(Meal meal) {
 		this.meal = meal;
+	}
+
+	public String getShopName() {
+		return shopName;
+	}
+
+	public void setShopName(String shopName) {
+		this.shopName = shopName;
+	}
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	public File getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(File photo) {
+		this.photo = photo;
+	}
+
+	public String getPhotoFileName() {
+		return photoFileName;
+	}
+
+	public void setPhotoFileName(String photoFileName) {
+		this.photoFileName = photoFileName;
+	}
+
+	public String getPhotoContentType() {
+		return photoContentType;
+	}
+
+	public void setPhotoContentType(String photoContentType) {
+		this.photoContentType = photoContentType;
 	}
 }
